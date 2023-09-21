@@ -4,7 +4,7 @@ void setup()
 {
   size(400,400);
   
-  a = new PVector (100, -60);
+  
   b = new PVector (200,60);
 }
 
@@ -14,6 +14,11 @@ void draw()
   strokeWeight(4);
   stroke(255);
   PVector pos = new PVector(100,200);
+  
+  PVector mouse = new PVector(mouseX,mouseY);
+  PVector a =  new PVector();
+  a = mouse.sub(pos);
+  
   line(pos.x, pos.y, pos.x + a.x, pos.y + a.y);
   line(pos.x, pos.y, pos.x + b.x, pos.y + b.y);
   
