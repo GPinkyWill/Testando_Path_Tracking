@@ -6,6 +6,7 @@ void setup()
   
   
   b = new PVector (200,60);
+  noCursor();
 }
 
 void draw()
@@ -27,9 +28,18 @@ void draw()
   stroke(0,0,255);
   line(pos.x, pos.y, pos.x + sp.x, pos.y + sp.y);
   
+  strokeWeight(1);
+  stroke(255);
+  line(pos.x + a.x,pos.y + a.y,pos.x + sp.x,  pos.y + sp.y  );
+  
+  
+  
   fill(0,255,0);
   noStroke();
   circle(pos.x,pos.y,8);
+  circle(mouseX,mouseY,8);
+  fill(255,0,0);
+  circle(pos.x + sp.x,pos.y + sp.y,8);
   
   
   
